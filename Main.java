@@ -418,7 +418,7 @@
 
 //static arguements
 
-// public class Main{
+// public method Main{
   //  public static void main(String[]args){
 
     //   friends friend1 = new friends("mihu");
