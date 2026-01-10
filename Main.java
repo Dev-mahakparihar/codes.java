@@ -1,12 +1,12 @@
-import java.util.Random;
 public class Main{
     public static void main(String[]args){
-        int number;
 
-        Random random = new Random();
+        double a=4;
+        double b =4;
+        double c;
 
-        number = random.nextInt(2,7);
-        System.out.println(number);
+        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+        System.out.println(c);
 
     }
 }
