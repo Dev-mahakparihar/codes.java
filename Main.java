@@ -1,21 +1,32 @@
-import java.util.Scanner;
+  import java.util.Scanner;
+
 public class Main{
     public static void main(String[]args){
+
         Scanner scanner = new Scanner(System.in);
 
-        int length;
-        int breadth;
-        int area;
+        String adjective1;
+        String adjective2;
+        String noun;
 
-        System.out.print("Enter length: ");
-        length = scanner.nextInt();
+        System.out.println("1. It was a " + "________ cold November day.(warm/freezy)");
+        System.out.println("2. I saw " +  "_________.(horse/cat)" );
+        System.out.println("3. Tanu likes to play"+ "________.(voilin/guitar)");
 
-        System.out.print("Enter the breadth: ");
-        breadth = scanner.nextInt();
+        System.out.println("Answers");
 
-        area = length*breadth;
+        System.out.print("1.");
+        adjective1 = scanner.nextLine();
+        System.out.print("2.");
+        adjective2 = scanner.nextLine();
+        System.out.print("3.");
+        noun = scanner.nextLine();
 
-        System.out.println(area);
+
+
+        scanner.close();
+
+
 
     }
 }
