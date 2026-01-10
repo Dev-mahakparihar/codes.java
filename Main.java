@@ -1,32 +1,12 @@
-  import java.util.Scanner;
-
+import java.util.Random;
 public class Main{
     public static void main(String[]args){
+        int number;
 
-        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
-        String adjective1;
-        String adjective2;
-        String noun;
-
-        System.out.println("1. It was a " + "________ cold November day.(warm/freezy)");
-        System.out.println("2. I saw " +  "_________.(horse/cat)" );
-        System.out.println("3. Tanu likes to play"+ "________.(voilin/guitar)");
-
-        System.out.println("Answers");
-
-        System.out.print("1.");
-        adjective1 = scanner.nextLine();
-        System.out.print("2.");
-        adjective2 = scanner.nextLine();
-        System.out.print("3.");
-        noun = scanner.nextLine();
-
-
-
-        scanner.close();
-
-
+        number = random.nextInt(2,7);
+        System.out.println(number);
 
     }
 }
