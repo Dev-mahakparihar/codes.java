@@ -1,17 +1,28 @@
+import java.util.Scanner;
+public class Main {
+    public void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-public class Main{
-    public static void main(String[]args){
+        double principle;
+        double rate;
+        int compound;
+        int years;
+        double amount;
 
+        System.out.print("Enter the principle amount: ");
+        principle = scanner.nextDouble();
 
+        System.out.print("Enter the interest rate: ");
+        rate = scanner.nextDouble() / 100;
 
-        double a=3;
-        double b =4;
-        double c;
+        System.out.print("Enter the number of times compounded every year: ");
+        compound = scanner.nextInt();
 
+        System.out.print("Enter the number of years: ");
+        years = scanner.nextInt();
 
-
-        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
-        System.out.println(c);
+        amount = principle * Math.pow(1 + rate / compound, compound * years);
+        System.out.println(amount);
 
     }
 }
