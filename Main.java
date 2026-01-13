@@ -1,28 +1,40 @@
 import java.util.Scanner;
-public class Main {
-    public void main(String[] args) {
+public class Main{
+    public static void main(String[]args){
+
         Scanner scanner = new Scanner(System.in);
 
-        double principle;
-        double rate;
-        int compound;
-        int years;
-        double amount;
+        double weight;
+        double newweight;
+        int choice;
 
-        System.out.print("Enter the principle amount: ");
-        principle = scanner.nextDouble();
+        System.out.println("Weight Conversion Program.");
 
-        System.out.print("Enter the interest rate: ");
-        rate = scanner.nextDouble() / 100;
+        System.out.println("1. Convert lbs to kgs-");
+        System.out.println("2. Convert kgs to lbs-");
 
-        System.out.print("Enter the number of times compounded every year: ");
-        compound = scanner.nextInt();
+        System.out.print("Choose an option- ");
+        choice = scanner.nextInt();
 
-        System.out.print("Enter the number of years: ");
-        years = scanner.nextInt();
 
-        amount = principle * Math.pow(1 + rate / compound, compound * years);
-        System.out.println(amount);
+        if(choice == 1){
+            System.out.print("Enter the weight in lbs- ");
+            weight = scanner.nextDouble();
+            newweight = 0.4535 * weight;
+            System.out.printf("The acquired weight in kgs is %.2f"  , newweight);
+        }
+        else if(choice==2){
+            System.out.print("Enter the weight in kgs- ");
+            weight = scanner.nextDouble();
+            newweight = 0.4535 * weight;
+            System.out.printf("The acquired weight in lbs is %.2f" ,newweight);
+        }
+        else {
+            System.out.println("Option Doesn't EXIST.");
+        }
+
+
+
 
     }
 }
