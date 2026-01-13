@@ -4,37 +4,35 @@ public class Main{
 
         Scanner scanner = new Scanner(System.in);
 
-        double weight;
-        double newweight;
         int choice;
+        double temp;
+        double newtemp;
 
-        System.out.println("Weight Conversion Program.");
 
-        System.out.println("1. Convert lbs to kgs-");
-        System.out.println("2. Convert kgs to lbs-");
 
-        System.out.print("Choose an option- ");
+        System.out.println("Conversion:");
+        System.out.println("1. From Fahrenheit to Celsius-");
+        System.out.println("2. From Celsius to Fahrenheit-");
+
+        System.out.print("Enter your choice: ");
         choice = scanner.nextInt();
 
 
-        if(choice == 1){
-            System.out.print("Enter the weight in lbs- ");
-            weight = scanner.nextDouble();
-            newweight = 0.4535 * weight;
-            System.out.printf("The acquired weight in kgs is %.2f"  , newweight);
+
+        if(choice==1){
+            System.out.print("Your given temperature is: ");
+            temp = scanner.nextDouble();
+            newtemp = (temp - 32) * 5/9;
+            System.out.println("Your calculated temp from F to C is " + newtemp);
         }
-        else if(choice==2){
-            System.out.print("Enter the weight in kgs- ");
-            weight = scanner.nextDouble();
-            newweight = 0.4535 * weight;
-            System.out.printf("The acquired weight in lbs is %.2f" ,newweight);
+        else if (choice==2){
+            System.out.print("Your given temperature is: ");
+            temp = scanner.nextDouble();
+            newtemp = (temp * 9/5) +32;
+            System.out.println("Your calculated temp from C to F is " + newtemp);
         }
-        else {
-            System.out.println("Option Doesn't EXIST.");
+        else{
+            System.out.println("Wrong Choice darlinn!!!");
         }
-
-
-
-
     }
 }
