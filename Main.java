@@ -1,38 +1,34 @@
 import java.util.Scanner;
+
 public class Main{
     public static void main(String[]args){
-
         Scanner scanner = new Scanner(System.in);
+        double number1;
+        char operator;
+        double number2;
+        double result=0;
 
-        int choice;
-        double temp;
-        double newtemp;
+        System.out.print("Enter the first number: ");
+        number1 = scanner.nextInt();
 
+        System.out.print("Enter the operator(+,-,*,/): ");
+        operator = scanner.next().charAt(0);
 
+        System.out.print("Enter the second number: ");
+        number2 = scanner.nextInt();
 
-        System.out.println("Conversion:");
-        System.out.println("1. From Fahrenheit to Celsius-");
-        System.out.println("2. From Celsius to Fahrenheit-");
+        switch(operator){
+            case '+' -> result = number1 + number2;
+            case '-' -> result = number1 - number2;
+            case '*' -> result = number1 * number2;
+            case '/' -> result = number1 / number2;
 
-        System.out.print("Enter your choice: ");
-        choice = scanner.nextInt();
-
-
-
-        if(choice==1){
-            System.out.print("Your given temperature is: ");
-            temp = scanner.nextDouble();
-            newtemp = (temp - 32) * 5/9;
-            System.out.println("Your calculated temp from F to C is " + newtemp);
         }
-        else if (choice==2){
-            System.out.print("Your given temperature is: ");
-            temp = scanner.nextDouble();
-            newtemp = (temp * 9/5) +32;
-            System.out.println("Your calculated temp from C to F is " + newtemp);
-        }
-        else{
-            System.out.println("Wrong Choice darlinn!!!");
-        }
+
+
+        System.out.println(result);
+
+
+
     }
 }
