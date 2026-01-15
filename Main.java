@@ -1,34 +1,21 @@
 import java.util.Scanner;
-
 public class Main{
     public static void main(String[]args){
         Scanner scanner = new Scanner(System.in);
-        double number1;
-        char operator;
-        double number2;
-        double result=0;
 
-        System.out.print("Enter the first number: ");
-        number1 = scanner.nextInt();
+        String username;
 
-        System.out.print("Enter the operator(+,-,*,/): ");
-        operator = scanner.next().charAt(0);
+        System.out.print("Enter your username: ");
+        username= scanner.nextLine();
 
-        System.out.print("Enter the second number: ");
-        number2 = scanner.nextInt();
-
-        switch(operator){
-            case '+' -> result = number1 + number2;
-            case '-' -> result = number1 - number2;
-            case '*' -> result = number1 * number2;
-            case '/' -> result = number1 / number2;
-
+        if(username.length()<4 || username.length()>12){
+            System.out.println("Username must be between 4 to 12 letters.");
         }
-
-
-        System.out.println(result);
-
-
-
+        else if(username.contains(" ") || username.contains("_")){
+            System.out.println("Username must not contain spaces or underscore.");
+        }
+        else{
+            System.out.println("Hello " + username);
+        }
     }
 }
