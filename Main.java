@@ -1,10 +1,11 @@
 public class Main{
     public static void main(String[]args){
-       String myfullname= fullname("Mahak", "Parihar");
-        System.out.println(myfullname);
+       String mypizza = makepizza("thicc crust ");
+        System.out.println(mypizza);
     }
-    static String fullname(String name, String surname){
-        return name + " " + surname;
+
+    static String makepizza(String bread){
+        return bread + "Pizza";
     }
 
 }
