@@ -1,21 +1,26 @@
 import java.util.Scanner;
 public class Main{
-    public static void main(String[]args){
+    public static void main(String[]args)throws InterruptedException{
         Scanner scanner = new Scanner(System.in);
 
-        String username;
+        System.out.print("How many seconds to start countdown from: ");
+        int countdown = scanner.nextInt();
 
-        System.out.print("Enter your username: ");
-        username= scanner.nextLine();
+        for(int i = countdown; i >=0;i--){
+            System.out.println(i);
+            Thread.sleep(1000);
 
-        if(username.length()<4 || username.length()>12){
-            System.out.println("Username must be between 4 to 12 letters.");
         }
-        else if(username.contains(" ") || username.contains("_")){
-            System.out.println("Username must not contain spaces or underscore.");
-        }
-        else{
-            System.out.println("Hello " + username);
-        }
+        System.out.println("HAPPY NEW YEAR");
+
+
+
+
+
+
+
+
+
+        scanner.close();
     }
 }
