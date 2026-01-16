@@ -1,26 +1,10 @@
-import java.util.Scanner;
-public class Main{
-    public static void main(String[]args)throws InterruptedException{
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("How many seconds to start countdown from: ");
-        int countdown = scanner.nextInt();
-
-        for(int i = countdown; i >=0;i--){
-            System.out.println(i);
-            Thread.sleep(1000);
-
+public class Main {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 10; i++) {
+            if (i == 6) {
+                continue;
+            }
+            System.out.print(i + " ");
         }
-        System.out.println("HAPPY NEW YEAR");
-
-
-
-
-
-
-
-
-
-        scanner.close();
     }
 }
