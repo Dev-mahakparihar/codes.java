@@ -1,25 +1,15 @@
-import java.util.Scanner;
 public class Main{
     public static void main(String[]args){
-        Scanner scanner = new Scanner(System.in);
+        System.out.println("Que- Find square/cube of 4.");
+        System.out.print("Ans-");
+        System.out.println("the square is " + square(4));
+        System.out.println("    the cube is " + cube(4));
 
-        int rows;
-        int columns;
-        char symbol;
-
-        System.out.print("Enter the # of rows-");
-        rows= scanner.nextInt();
-        System.out.print("Enter the # of columns-");
-        columns= scanner.nextInt();
-        System.out.print("Enter the  symbol-");
-        symbol= scanner.next().charAt(0);
-
-        for(int i =0;i<rows;i++){
-            for(int j=0;j<columns;j++){
-                System.out.print(symbol);
-            }
-            System.out.println();
-        }
-
+    }
+    static double cube(double number){
+        return number*number*number;
+    }
+   static double square(double number){
+        return number*number;
     }
 }
