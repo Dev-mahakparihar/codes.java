@@ -1,22 +1,17 @@
-import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
 
-public class Main{
-    public static void main(String[]args){
-        Scanner  scanner = new Scanner(System.in);
-        int[] numbers = {2,5,4,7,8};
-        int target = 9;
-        boolean isFound = false;
+        System.out.println(average(3,4,6,8));
 
-        for(int i =0;i< numbers.length;i++){
-            if(target==numbers[i]){
-                System.out.println("Element found at index: " + i);
-                 isFound= true;
-                break;
-            }
 
-        }
-        if(!isFound){
-            System.out.println("Element is not present in the array");
-        }
     }
- }
+
+    static  double average(double... numbers){
+       double sum =0;
+       for(double number:numbers){
+           sum += number;
+       }
+       return sum / numbers.length;
+
+    }
+}
