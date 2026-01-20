@@ -1,23 +1,17 @@
 import java.util.Scanner;
+
 public class Main{
     public static void main(String[]args){
-        Scanner scanner = new Scanner(System.in);
+        Scanner  scanner = new Scanner(System.in);
+        int[] numbers = {2,5,4,7,8};
+        int target = 8;
 
-        String[] animals= new String[4];
-
-
-        for(int i=0;i< animals.length;i++){
-            System.out.print("Enter  animal: ");
-            animals[i] = scanner.nextLine();
+        for(int i =0;i< numbers.length;i++){
+            if(target==numbers[i]){
+                System.out.println("Element found at index: " + i);
+                break;
+            }
 
         }
-        for(String animal:animals) {
-            System.out.println(animal);
-        }
-
-
-
-
-
     }
-}
+ }
