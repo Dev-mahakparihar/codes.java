@@ -1,17 +1,16 @@
-public class Main {
-    public static void main(String[] args) {
+public class Main{
+    public static void main(String[]args){
 
-        System.out.println(average(3,4,6,8));
+        char[][] telephone= { {'1', '2', '3'},
+                              {'4', '5', '6'},
+                              {'7', '8', '9'},
+                              {'*', '0','#' }};
+        for(char[]digits: telephone){
+            for(char character:digits){
+                System.out.print(character + " ");
 
-
-    }
-
-    static  double average(double... numbers){
-       double sum =0;
-       for(double number:numbers){
-           sum += number;
-       }
-       return sum / numbers.length;
-
+            }
+            System.out.println();
+        }
     }
 }
