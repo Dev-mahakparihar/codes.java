@@ -60,6 +60,7 @@ public class Main{
             }
         System.out.println("Your total score is: " + score + "/" + answers.length);
 
+
         }
 
     }
