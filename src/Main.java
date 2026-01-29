@@ -1,11 +1,11 @@
-public class Main{
+ public class Main{
     public static void main(String[]args){
-        User user1= new User("Mahak");
-        User user2 = new User("payal","mahparihar@gmail.com");
-        User user3 = new User("payal","mahparihar@gmail.com",22);
+        Car car1 = new Car("BMW","red");
+        Car car2 = new Car("Audi","black");
+        Car car3 = new Car("Mercedes","pink");
 
-        System.out.println(user3.username + " is " + user3.age + " years old");
-        
+        car3.drive();
+
 
     }
-}
+ }
