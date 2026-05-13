@@ -1,11 +1,18 @@
 public class Main{
     public static void main(String[]args){
-        Friend friend= new Friend("mahak");
 
 
+        int [] num = {3,7,1,9,4};
 
+        int max = num[0];
+        for(int i=0;i<num.length;i++){
+            if(num[i]>max){
+                max=num[i];
 
-        System.out.println(friend.name);
+            }
 
+        }
+        System.out.println(max);
     }
+
 }
